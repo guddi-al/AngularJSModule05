@@ -1,0 +1,28 @@
+﻿<div>
+    <h2>Sign Up</h2>
+    <form name="$ctrl.signupForm" ng-submit="$ctrl.submit()">
+        <div>
+            <label>First Name</label>
+            <input type="text" name="firstName" ng-model="$ctrl.user.firstName" required>
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lastName" ng-model="$ctrl.user.lastName" required>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" ng-model="$ctrl.user.email" required>
+        </div>
+        <div>
+            <label>Phone Number</label>
+            <input type="tel" name="phone" ng-model="$ctrl.user.phone" required>
+        </div>
+        <div>
+            <label>Favorite Menu Item Number</label>
+            <input type="text" name="menuNumber" ng-model="$ctrl.user.menuNumber" required>
+        </div>
+        <button type="submit">Submit</button>
+        <div ng-if="$ctrl.successMessage">{{ $ctrl.successMessage }}</div>
+        <div ng-if="$ctrl.errorMessage">{{ $ctrl.errorMessage }}</div>
+    </form>
+</div>
